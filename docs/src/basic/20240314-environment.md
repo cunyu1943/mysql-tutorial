@@ -8,7 +8,7 @@
 
 
 
-## 下载
+## 一、下载 MySQL
 
 > https://dev.mysql.com/downloads/mysql/
 
@@ -16,7 +16,7 @@
 
 ![](assets/20240314-environment/chrome_1710375498.webp)
 
-## 安装
+## 二、安装 
 
 第一步，解压缩下载后的压缩包。
 
@@ -93,7 +93,7 @@ net stop mysql
 
 ![](assets/20240314-environment/WindowsTerminal_1710417206.webp)
 
-## 修改密码
+## 三、修改默认密码
 
 安装时，我们已经有了 `root` 用户的初始密码，但是随机生成的密码比较难记，所以大多时候都会修改默认密码。
 

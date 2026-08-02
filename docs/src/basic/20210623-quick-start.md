@@ -8,9 +8,9 @@
 
 
 
-## 数据库基本概念
+## 一、数据库基本概念
 
-### 什么是数据库
+### 1.1 什么是数据库
 
 >   数据库，又称为数据管理系统，简而言之可视为电子化的文件柜——存储电子文件的处所，用户可以对文件中的资料运行新增、截取、更新、删除等操作。
 
@@ -18,13 +18,13 @@
 
 >   数据库是结构化信息或数据（一般以电子形式存储在计算机系统中）的有组织的集合，通常由数据库管理系统 (DBMS) 来控制。在现实中，数据、`DBMS` 及关联应用一起被称为数据库系统，通常简称为数据库。
 
-### 数据库的特点
+### 1.2 数据库软件的特点
 
 1.  能够对数据持久化存储，相当于一个文件系统；
 2.  方便存储和管理数据；
 3.  使用统一的方式来操作（`SQL`）；
 
-### 常见数据库软件
+### 1.3 常见数据库软件
 
 ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859495.webp)
 
@@ -34,11 +34,11 @@
 1.  **使用量大**，相比于其他数据库，其使用量仅次于 Oracle；
 2.  **开源免费**，虽然 Oracle 很好，但是授权的价格却让人望而却步，许多小公司根本无力承担这笔费用，而选用开源免费的 MySQL 就成了大家的选择；
 
-## MySQL
+## 二、MySQL 安装
 
 对于 MySQL 的安装，我这里以压缩包版本的安装为例。
 
-### 安装
+### 2.1 安装
 
 1.  **下载安装包**
 
@@ -128,13 +128,13 @@ mysqld --install
 因为博主已经安装过了，所以会提示服务已存在，若是第一次安装，则不会提示已安装；
 ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859470.webp)
 
-### 卸载
+### 2.2 卸载
 
 卸载相对于安装就简单多了，只需要将我们的文件夹 `D:\Softs\mysql-8.0.24-winx64` 删除，然后将配置的环境变量删除即可。
 
-### 配置
+### 2.3 配置
 
-#### 启动 MySQL 服务
+#### 2.3.1 启动 MySQL 服务
 
 1.  **Windows 服务方式启动**
 
@@ -160,7 +160,7 @@ net stop mysql
 ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859494.webp)
 
 
-#### 登陆
+#### 2.3.2 登陆
 
 安装并打开 MySQL 服务之后，我们就可以连接数据库进行使用了。MySQL 安装时默认提供了一个 `root` 用户，使用安装时设置的密码即可登陆。
 
@@ -180,7 +180,7 @@ mysql -h localhost -u root -p
 
 ![](assets/20210623-quick-start/1d93614d9179873de1447357980753ac.webp)
 
-#### 退出
+#### 2.3.3 退出登陆
 
 
 ```bash
@@ -192,15 +192,15 @@ quit;
 
 ![](assets/20210623-quick-start/a281d38e3b73def59d8a1bf46134a21b.webp)
 
-## SQL
+## 三、SQL 基础语法
 
-### 什么是 SQL
+### 3.1 什么是 SQL
 
 >   **Structured Query Language**：结构化查询语言是一种特定目的编程语言，用于管理关系数据库管理系统（RDBMS），或在关系流数据管理系统（RDSMS）中进行流处理。
 >
 >   SQL 基于关系代数和元组关系演算，包括一个数据定义语言和数据操纵语言。SQL 的范围包括数据插入、查询、更新和删除，数据库模式创建和修改，以及数据访问控制。尽管 SQL 经常被描述为，而且很大程度上是一种声明式编程（4GL），但是其也含有过程式编程的元素。
 
-### SQL 通用语法
+### 3.2 SQL 通用语法
 
 1.  SQL 语句能以单行或多行书写，以分号 `;` 表示一条语句的结束；
 
@@ -227,7 +227,7 @@ SQL语句 /* 注释内容 */
 
 ![](assets/20210623-quick-start/b6747ab4d4c7d0ea99e9babd50321c15.webp)
 
-### 常用 SQL 语句
+### 3.3 常用 SQL 语句
 
 对于 SQL 语句，我们可以分为如下几类：
 
@@ -238,7 +238,7 @@ SQL语句 /* 注释内容 */
 
 以下就分别来看看各类语句的具体相关信息。 
 
-#### DDL（Data Definition Language）
+#### 3.3.1 DDL（Data Definition Language）
 
 1.  **定义**
 
@@ -446,7 +446,7 @@ SQL语句 /* 注释内容 */
 
 ​    
 
-#### DML（Data Manipulation Language）
+#### 3.3.2 DML（Data Manipulation Language）
 
 1.  **定义**
 
@@ -481,7 +481,7 @@ SQL语句 /* 注释内容 */
 ![](assets/20210623-quick-start/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L2dpdGh1Yl8zOTY1NTAyOQ==,size_16,color_FFFFFF,t_70-20240216132859587.webp)
 
 
-#### DQL（Data Query Language）
+#### 3.3.3 DQL（Data Query Language）
 
 1.  **定义**
 
@@ -551,7 +551,7 @@ OFFSET
 
 
 
-#### DCL（Data Control Language）
+#### 3.3.4 DCL（Data Control Language）
 
 1.  **定义**
 
@@ -571,13 +571,13 @@ REVOKE 权限 数据库名.表名 ON FROM 用户名;
 
 
 
-## 图形化工具
+## 四、图形化工具
 
 在本地安装好数据库之后，我们可以通过命令行来进行操作，但是为了更加直观的看到我们的数据库属性和数据，我们一般都会选择图形化的工具来辅助我们进行开发。而这里我们推荐 DBeaver（https://dbeaver.io）。
 
 这是一款通用的免费跨平台数据库工具，供开发人员、数据库管理员、分析人员和所有需要使用数据库的人使用。而且支持当前所有流行的数据库：MySQL,、PostgreSQL,、SQLite,、Oracle,、DB2,、SQL Server,、Sybase,、MS Access,、Teradata,、Firebird,、Apache Hive,、Phoenix,、Presto 等。
 
-### 安装过程
+### 4.1 DBeaver 安装过程
 
 1. 双击打开下载好的 `.exe` 安装包，然后选择语言；
 
@@ -619,7 +619,7 @@ REVOKE 权限 数据库名.表名 ON FROM 用户名;
 
 ![](assets/20210623-quick-start/3b5e33e5c405b04c197823cad14d14bb.webp)
 
-### 连接数据库
+### 4.2 DBeaver 连接数据库
 
 1. 打开主界面后，依次打开 `文件 -> 新建 -> DBeaver -> 数据库连接`，然后下一步；
 
@@ -648,6 +648,6 @@ REVOKE 权限 数据库名.表名 ON FROM 用户名;
 
 以上就是关于如何安装以及简单使用 DBeaver 的相关知识了，更多关于 DBeaver 的高级使用技巧，等着你去探索！
 
-## 总结
+## 五、总结
 
 好了，以上就是今天的所有内容了。主要介绍了数据库的相关概念，并对 MySQL 的安装、卸载及配置进行了讲解。紧接着又对 SQL 进行了讲解，并对日常使用最多的一些 SQL 基础语句进行了介绍。最后，则是介绍了针对数据库图形化操作的工具 - DBeaver。如果你想要熟练地掌握常见的 SQL 语句，进一步提高自己的开发效率，那就赶紧去练习吧！
